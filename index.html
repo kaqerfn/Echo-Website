@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echo | Chapter 2 Season 5</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Echo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- Navigation -->
-
 <header class="header">
 
-    <a href="#" class="logo">
+    <div class="logo">
         ECHO
-    </a>
+    </div>
 
-    <nav class="navbar">
+    <nav>
 
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#features">Features</a>
         <a href="#store">Store</a>
         <a href="#updates">Updates</a>
@@ -35,13 +39,15 @@
 
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
+    <div class="overlay"></div>
+
     <div class="hero-content">
 
-        <span class="hero-tag">
+        <span class="hero-badge">
             PROJECT ECHO
         </span>
 
@@ -51,17 +57,20 @@
         </h1>
 
         <p>
-            Relive Chapter 2 Season 5 with modern servers, smooth performance,
-            active development, and an amazing community.
+
+            Relive Chapter 2 Season 5 with smooth performance,
+            custom cosmetics, frequent updates,
+            and an active community.
+
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#store" class="btn">
+            <a href="#store" class="primary-btn">
                 Download
             </a>
 
-            <a href="#discord" class="btn secondary">
+            <a href="#discord" class="secondary-btn">
                 Join Discord
             </a>
 
@@ -71,45 +80,56 @@
 
 </section>
 
-<!-- Features -->
+<!-- ABOUT -->
 
-<section class="features" id="features">
+<section class="about" id="about">
 
-    <h2>Why Choose Echo?</h2>
+    <div class="section-title">
 
-    <div class="feature-grid">
+        <span>ABOUT</span>
 
-        <div class="feature-card">
-            <div class="icon">⚡</div>
+        <h2>Why Echo?</h2>
 
-            <h3>Fast Performance</h3>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <h3>⚡ Fast</h3>
 
             <p>
-                Optimized servers with smooth gameplay and fast loading.
+                Optimized servers with smooth gameplay.
             </p>
 
         </div>
 
-        <div class="feature-card">
+        <div class="about-card">
 
-            <div class="icon">🎮</div>
-
-            <h3>Chapter 2 Season 5</h3>
+            <h3>🎮 Classic</h3>
 
             <p>
-                Experience the classic Season 5 gameplay with modern improvements.
+                Chapter 2 Season 5 gameplay.
             </p>
 
         </div>
 
-        <div class="feature-card">
+        <div class="about-card">
 
-            <div class="icon">🛡️</div>
-
-            <h3>Secure</h3>
+            <h3>🛡 Secure</h3>
 
             <p>
-                Safe launcher, reliable servers, and constant updates.
+                Safe authentication and reliable servers.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <h3>🌍 Community</h3>
+
+            <p>
+                Join events and meet other players.
             </p>
 
         </div>
@@ -118,11 +138,95 @@
 
 </section>
 
-<!-- Store -->
+<!-- FEATURES -->
+
+<section class="features" id="features">
+
+    <div class="section-title">
+
+        <span>FEATURES</span>
+
+        <h2>Everything You Need</h2>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <h3>🚀 Performance</h3>
+
+            <p>
+                Optimized loading and smooth gameplay.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>🎨 Cosmetics</h3>
+
+            <p>
+                Exclusive cosmetics and customization.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>⚡ Updates</h3>
+
+            <p>
+                Constant improvements and new content.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>🎯 Competitive</h3>
+
+            <p>
+                Built for both casual and competitive players.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>🌎 Community</h3>
+
+            <p>
+                Active Discord and community events.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>🔒 Security</h3>
+
+            <p>
+                Stable infrastructure and account protection.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STORE -->
 
 <section class="store" id="store">
 
-    <h2>Store</h2>
+    <div class="section-title">
+
+        <span>STORE</span>
+
+        <h2>Support Echo</h2>
+
+    </div>
 
     <div class="store-grid">
 
@@ -132,9 +236,9 @@
 
             <div class="price">$2.99</div>
 
-            <p>Support the project.</p>
-
-            <a href="#" class="btn">Purchase</a>
+            <a href="#" class="primary-btn">
+                Purchase
+            </a>
 
         </div>
 
@@ -144,9 +248,9 @@
 
             <div class="price">$4.99</div>
 
-            <p>Exclusive OG rewards.</p>
-
-            <a href="#" class="btn">Purchase</a>
+            <a href="#" class="primary-btn">
+                Purchase
+            </a>
 
         </div>
 
@@ -156,9 +260,9 @@
 
             <div class="price">$4.99</div>
 
-            <p>Special supporter perks.</p>
-
-            <a href="#" class="btn">Purchase</a>
+            <a href="#" class="primary-btn">
+                Purchase
+            </a>
 
         </div>
 
@@ -168,23 +272,25 @@
 
             <div class="price">$7.99</div>
 
-            <p>Built for competitive players.</p>
-
-            <a href="#" class="btn">Purchase</a>
+            <a href="#" class="primary-btn">
+                Purchase
+            </a>
 
         </div>
 
-        <div class="store-card best">
+        <div class="store-card featured">
 
-            <span>BEST VALUE</span>
+            <span class="featured-tag">
+                BEST VALUE
+            </span>
 
             <h3>👑 Full Locker</h3>
 
             <div class="price">$15.00</div>
 
-            <p>Unlock everything.</p>
-
-            <a href="#" class="btn">Purchase</a>
+            <a href="#" class="primary-btn">
+                Purchase
+            </a>
 
         </div>
 
