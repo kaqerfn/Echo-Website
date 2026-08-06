@@ -1,169 +1,124 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Poppins",sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo</title>
 
-html{
-    scroll-behavior:smooth;
-}
+    <link rel="stylesheet" href="style.css">
 
-body{
-    background:#07060d;
-    color:white;
-    overflow-x:hidden;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* Navbar */
+<header>
 
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    backdrop-filter:blur(18px);
-    background:rgba(0,0,0,.25);
-    border-bottom:1px solid rgba(255,255,255,.08);
-    z-index:1000;
-}
+    <div class="logo">ECHO</div>
 
-.logo{
-    font-size:34px;
-    font-weight:800;
-    color:#ff5fcf;
-    letter-spacing:2px;
-}
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#store">Store</a>
+        <a href="#updates">Updates</a>
+        <a href="#faq">FAQ</a>
+        <a href="#discord">Discord</a>
+    </nav>
 
-nav{
-    display:flex;
-    gap:35px;
-}
+</header>
 
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-    font-weight:500;
-}
+<section class="hero" id="home">
 
-nav a:hover{
-    color:#ff5fcf;
-}
+    <div class="overlay"></div>
 
-/* Hero */
+    <div class="hero-content">
 
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
+        <span class="badge">CHAPTER 2 • SEASON 5</span>
 
-    background:url("echo-bg.png") center center/cover no-repeat;
-}
+        <h1>ECHO</h1>
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        rgba(5,5,15,.55),
-        rgba(5,5,15,.85)
-    );
-}
+        <p>
+            Relive the Chapter 2 Season 5 experience with smooth gameplay,
+            custom cosmetics, frequent updates, and an active community.
+        </p>
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:800px;
-    padding:20px;
-}
+        <div class="buttons">
+            <a href="#store" class="primary">Download</a>
+            <a href="#discord" class="secondary">Join Discord</a>
+        </div>
 
-.badge{
-    display:inline-block;
-    padding:10px 22px;
-    border-radius:30px;
-    background:rgba(255,95,207,.18);
-    border:1px solid rgba(255,95,207,.5);
-    color:#ff8add;
-    margin-bottom:30px;
-}
+    </div>
 
-.hero h1{
-    font-size:110px;
-    line-height:1;
-    font-weight:800;
-    text-shadow:0 0 30px rgba(255,95,207,.6);
-}
+</section>
 
-.hero p{
-    margin-top:25px;
-    font-size:20px;
-    color:#d7d7d7;
-    line-height:1.8;
-}
+<section class="about" id="about">
 
-.buttons{
-    margin-top:45px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+    <div class="about-text">
 
-.primary,
-.secondary{
-    text-decoration:none;
-    padding:16px 42px;
-    border-radius:12px;
-    transition:.35s;
-    font-weight:600;
-}
+        <span class="section-title">ABOUT ECHO</span>
 
-.primary{
-    background:#ff5fcf;
-    color:white;
-    box-shadow:0 0 25px rgba(255,95,207,.5);
-}
+        <h2>The Classic Experience Returns.</h2>
 
-.primary:hover{
-    transform:translateY(-4px);
-}
+        <p>
+            Echo is a community-driven Fortnite project focused on bringing
+            back the Chapter 2 Season 5 experience with modern performance,
+            custom features, and a friendly community.
+        </p>
 
-.secondary{
-    border:1px solid rgba(255,255,255,.15);
-    background:rgba(255,255,255,.06);
-    color:white;
-}
+    </div>
 
-.secondary:hover{
-    background:rgba(255,255,255,.12);
-}
+    <div class="stats">
 
-@media(max-width:900px){
+        <div class="stat-card">
+            <h3>⚡</h3>
+            <h4>Performance</h4>
+            <p>Optimized gameplay with smooth performance.</p>
+        </div>
 
-header{
-    flex-direction:column;
-    gap:15px;
-}
+        <div class="stat-card">
+            <h3>🛡</h3>
+            <h4>Security</h4>
+            <p>Reliable servers and regular maintenance.</p>
+        </div>
 
-nav{
-    gap:18px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
+        <div class="stat-card">
+            <h3>🎮</h3>
+            <h4>Gameplay</h4>
+            <p>Experience Chapter 2 Season 5 once again.</p>
+        </div>
 
-.hero h1{
-    font-size:70px;
-}
+        <div class="stat-card">
+            <h3>🌎</h3>
+            <h4>Community</h4>
+            <p>Events, updates, and an active Discord server.</p>
+        </div>
 
-.hero p{
-    font-size:18px;
-}
+    </div>
 
-}
+</section>
+
+<section id="features">
+</section>
+
+<section id="store">
+</section>
+
+<section id="updates">
+</section>
+
+<section id="faq">
+</section>
+
+<section id="discord">
+</section>
+
+<footer>
+
+    <p>© 2026 Echo. All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
