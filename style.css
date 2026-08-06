@@ -1,35 +1,37 @@
-* {
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html {
+html{
     scroll-behavior:smooth;
 }
 
-body {
+body{
     font-family:"Outfit",sans-serif;
-    background:#07000f;
+    background:#060009;
     color:white;
     overflow-x:hidden;
 }
 
 
-body::before {
+body::before{
     content:"";
     position:fixed;
     inset:0;
     background:
-    radial-gradient(circle at top, rgba(155,50,255,.35), transparent 45%),
-    linear-gradient(#12001d,#050008);
+    radial-gradient(circle at top,rgba(150,50,255,.35),transparent 50%),
+    linear-gradient(180deg,#12001f,#050006);
     z-index:-1;
 }
 
 
-header {
+
+header{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
     padding:35px 70px;
     display:flex;
@@ -39,55 +41,55 @@ header {
 }
 
 
-.logo {
+.logo{
     font-size:35px;
     font-weight:800;
-    letter-spacing:5px;
+    letter-spacing:6px;
 }
 
 
-nav {
+nav{
     display:flex;
     gap:35px;
 }
 
 
-nav a {
+nav a{
     color:#aaa;
     text-decoration:none;
-    transition:.3s;
 }
 
 
-nav a:hover {
+nav a:hover{
     color:white;
 }
 
 
 
-.hero {
+
+.hero{
     min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:120px 30px;
+    padding:120px 20px;
 }
 
 
-.hero-content {
+.hero-box{
     max-width:900px;
 }
 
 
-.hero span,
-.title span {
+.tag,
+.title p{
     color:#a855ff;
     letter-spacing:6px;
 }
 
 
-.hero h1 {
+.hero h1{
     font-size:100px;
     line-height:.95;
     margin:30px 0;
@@ -95,7 +97,7 @@ nav a:hover {
 }
 
 
-.hero p {
+.desc{
     color:#aaa;
     font-size:22px;
     max-width:700px;
@@ -105,16 +107,15 @@ nav a:hover {
 
 
 
-.buttons {
-    margin-top:50px;
+.buttons{
     display:flex;
     justify-content:center;
     gap:25px;
+    margin-top:50px;
 }
 
 
-.primary,
-.secondary {
+.btn{
     padding:22px 55px;
     border-radius:18px;
     font-size:20px;
@@ -123,80 +124,89 @@ nav a:hover {
 }
 
 
-.primary {
+.main{
     background:#8b2cff;
     color:white;
-    box-shadow:0 0 45px rgba(139,44,255,.6);
+    box-shadow:0 0 40px rgba(139,44,255,.6);
 }
 
 
-.secondary {
-    border:2px solid rgba(255,255,255,.25);
+.second{
     color:white;
+    border:2px solid rgba(255,255,255,.25);
 }
 
 
 
-section {
+
+
+section{
     max-width:1200px;
     margin:auto;
     padding:120px 30px;
 }
 
 
-.title {
+
+.title{
     text-align:center;
     margin-bottom:60px;
 }
 
 
-.title h2 {
+.title h2{
     font-size:55px;
     margin-top:15px;
 }
 
 
 
-.grid {
+.cards,
+.store-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
     gap:30px;
+    grid-template-columns:repeat(3,1fr);
 }
 
 
 
-.card {
+.store-grid{
+    grid-template-columns:repeat(5,1fr);
+}
+
+
+
+.card{
     background:rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.12);
     border-radius:25px;
     padding:40px;
-    backdrop-filter:blur(15px);
     text-align:center;
+    backdrop-filter:blur(15px);
 }
 
 
-.card h3 {
+.card h3{
     font-size:26px;
     margin-bottom:20px;
 }
 
 
-.card p {
+.card p{
     color:#aaa;
-    line-height:1.6;
 }
 
 
-.card h2 {
-    font-size:45px;
-    margin:20px 0;
+.card h4{
+    font-size:40px;
+    margin:20px;
 }
 
 
-button {
+button{
     background:#8b2cff;
-    color:white;
     border:0;
+    color:white;
     padding:14px 30px;
     border-radius:12px;
     font-weight:700;
@@ -204,31 +214,15 @@ button {
 
 
 
-.discord {
-    text-align:center;
-}
 
-
-.discord h2 {
-    font-size:60px;
-}
-
-
-.discord p {
-    color:#aaa;
-    margin:25px;
-}
-
-
-
-footer {
+footer{
     text-align:center;
     padding:70px;
     border-top:1px solid rgba(255,255,255,.1);
 }
 
 
-footer h2 {
+footer h2{
     font-size:50px;
     letter-spacing:8px;
 }
@@ -237,27 +231,28 @@ footer h2 {
 
 @media(max-width:900px){
 
-    header {
-        padding:25px;
-    }
+header{
+    padding:25px;
+}
 
-    nav {
-        display:none;
-    }
-
-
-    .hero h1 {
-        font-size:55px;
-    }
+nav{
+    display:none;
+}
 
 
-    .buttons {
-        flex-direction:column;
-    }
+.hero h1{
+    font-size:55px;
+}
 
 
-    .grid {
-        grid-template-columns:1fr;
-    }
+.buttons{
+    flex-direction:column;
+}
+
+
+.cards,
+.store-grid{
+    grid-template-columns:1fr;
+}
 
 }
