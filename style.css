@@ -1,124 +1,307 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echo</title>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
 
-    <link rel="stylesheet" href="style.css">
+html{
+    scroll-behavior:smooth;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
+body{
+    background:#090612;
+    color:#fff;
+    overflow-x:hidden;
+}
 
-<header>
+/* Scrollbar */
 
-    <div class="logo">ECHO</div>
+::-webkit-scrollbar{
+    width:10px;
+}
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#store">Store</a>
-        <a href="#updates">Updates</a>
-        <a href="#faq">FAQ</a>
-        <a href="#discord">Discord</a>
-    </nav>
+::-webkit-scrollbar-thumb{
+    background:#ff63d5;
+    border-radius:20px;
+}
 
-</header>
+/* Navbar */
 
-<section class="hero" id="home">
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:999;
+    backdrop-filter:blur(18px);
+    background:rgba(8,8,18,.45);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
 
-    <div class="overlay"></div>
+.logo{
+    text-decoration:none;
+    color:#fff;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:3px;
+}
 
-    <div class="hero-content">
+nav{
+    display:flex;
+    gap:35px;
+}
 
-        <span class="badge">CHAPTER 2 • SEASON 5</span>
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:500;
+}
 
-        <h1>ECHO</h1>
+nav a:hover{
+    color:#ff63d5;
+}
 
-        <p>
-            Relive the Chapter 2 Season 5 experience with smooth gameplay,
-            custom cosmetics, frequent updates, and an active community.
-        </p>
+/* Hero */
 
-        <div class="buttons">
-            <a href="#store" class="primary">Download</a>
-            <a href="#discord" class="secondary">Join Discord</a>
-        </div>
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:url("echo-bg.png") center center/cover no-repeat;
+}
 
-    </div>
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(rgba(10,10,20,.35),rgba(10,10,20,.8));
+}
 
-</section>
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    padding:20px;
+}
 
-<section class="about" id="about">
+.badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:30px;
+    background:rgba(255,99,213,.15);
+    border:1px solid rgba(255,99,213,.4);
+    color:#ff92e4;
+    margin-bottom:30px;
+    font-size:14px;
+    letter-spacing:2px;
+}
 
-    <div class="about-text">
+.hero h1{
+    font-size:120px;
+    font-weight:800;
+    text-shadow:0 0 35px rgba(255,99,213,.55);
+}
 
-        <span class="section-title">ABOUT ECHO</span>
+.hero p{
+    margin-top:25px;
+    color:#ddd;
+    font-size:20px;
+    line-height:1.8;
+}
 
-        <h2>The Classic Experience Returns.</h2>
+.buttons{
+    margin-top:45px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-        <p>
-            Echo is a community-driven Fortnite project focused on bringing
-            back the Chapter 2 Season 5 experience with modern performance,
-            custom features, and a friendly community.
-        </p>
+.primary,
+.secondary{
+    padding:17px 42px;
+    border-radius:14px;
+    text-decoration:none;
+    transition:.35s;
+    font-weight:600;
+}
 
-    </div>
+.primary{
+    background:#ff63d5;
+    color:white;
+    box-shadow:0 0 30px rgba(255,99,213,.4);
+}
 
-    <div class="stats">
+.primary:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 40px rgba(255,99,213,.8);
+}
 
-        <div class="stat-card">
-            <h3>⚡</h3>
-            <h4>Performance</h4>
-            <p>Optimized gameplay with smooth performance.</p>
-        </div>
+.secondary{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    color:white;
+}
 
-        <div class="stat-card">
-            <h3>🛡</h3>
-            <h4>Security</h4>
-            <p>Reliable servers and regular maintenance.</p>
-        </div>
+.secondary:hover{
+    transform:translateY(-6px);
+}
 
-        <div class="stat-card">
-            <h3>🎮</h3>
-            <h4>Gameplay</h4>
-            <p>Experience Chapter 2 Season 5 once again.</p>
-        </div>
+/* Sections */
 
-        <div class="stat-card">
-            <h3>🌎</h3>
-            <h4>Community</h4>
-            <p>Events, updates, and an active Discord server.</p>
-        </div>
+section{
+    padding:120px 8%;
+}
 
-    </div>
+.section-tag{
+    color:#ff92e4;
+    font-size:14px;
+    letter-spacing:2px;
+    font-weight:600;
+}
 
-</section>
+.section-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
 
-<section id="features">
-</section>
+.section-heading h2{
+    margin-top:15px;
+    font-size:48px;
+}
 
-<section id="store">
-</section>
+/* About */
 
-<section id="updates">
-</section>
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
 
-<section id="faq">
-</section>
+.text h2{
+    font-size:52px;
+    margin:18px 0;
+}
 
-<section id="discord">
-</section>
+.text p{
+    color:#ccc;
+    line-height:1.9;
+}
 
-<footer>
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
 
-    <p>© 2026 Echo. All Rights Reserved.</p>
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border-radius:18px;
+    padding:35px;
+    transition:.35s;
+}
 
-</footer>
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ff63d5;
+}
 
-<script src="script.js"></script>
+.card h3{
+    font-size:34px;
+}
 
-</body>
-</html>
+.card h4{
+    margin:12px 0;
+}
+
+/* Features */
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.feature-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:35px;
+    transition:.35s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    border-color:#ff63d5;
+}
+
+.feature-card h3{
+    margin-bottom:15px;
+    color:#ff92e4;
+}
+
+.feature-card p{
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* Footer */
+
+footer{
+    padding:40px;
+    text-align:center;
+    color:#888;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.hero h1{
+    font-size:72px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.section-heading h2{
+    font-size:36px;
+}
+
+.text h2{
+    font-size:40px;
+}
+
+}
