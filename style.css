@@ -187,3 +187,17 @@ footer{
     }
 
 }
+body::before{
+    content:"";
+    position:fixed;
+    top:-300px;
+    left:50%;
+    transform:translateX(-50%);
+    width:900px;
+    height:900px;
+    background:#8b5cf6;
+    border-radius:50%;
+    filter:blur(250px);
+    opacity:.15;
+    z-index:-1;
+}
